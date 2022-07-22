@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Diplomata&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #de4848;
+  padding: 20px;
+  height: 80px;
+  width: 100%;
+}
+.header a {
+  color: white;
+  text-decoration: none;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 15px;
+  font-family: Diplomata, serif;
+}
