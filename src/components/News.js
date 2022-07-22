@@ -1,20 +1,23 @@
 import moment from 'moment';
-function news({title, abstract, url, image, caption, copyright, byline, publishedDate}) {
+import { Link } from 'react-router-dom';
+import styles from "./News.module.css"
+
+function News({title, abstract, url, image, caption, byline, publishedDate}) {
   return (
-    <article>
+    <article className={styles.news}>
         <figure>
-            <a href={url}>
-                <img src={image} alt={caption}/>
-            </a>
+            <Link to="article">
+                {image && <img src={image[0].url} alt={caption}/>}
+            </Link>
             <figcaption>
-                {copyright}
+                <span>{image[0].copyright}</span>
             </figcaption>
         </figure>
         <div>
             <h2>
-                <a href={url}>
+                <Link to="article">
                     {title}
-                </a>
+                </Link>
             </h2>
             <p>{abstract}</p>
             <p>
@@ -25,4 +28,5 @@ function news({title, abstract, url, image, caption, copyright, byline, publishe
     </article>
   )
 }
-export default news
+
+export default News;

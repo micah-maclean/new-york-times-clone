@@ -5,6 +5,7 @@ import Science from "./pages/Science/Science";
 import Tech from "./pages/Tech/Tech";
 import Health from "./pages/Health/Health";
 import Politics from "./pages/Politics/Politics";
+import Article from "./pages/Article/Article";
 import Header from "./components/Header";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/tech" element={<Tech />} />
           <Route path="/health" element={<Health />} />
           <Route path="/politics" element={<Politics />} />
+          <Route path="/article" element={<Article />} />
         </Routes>
       </BrowserRouter>
     </div>

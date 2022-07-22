@@ -6,7 +6,7 @@ function Menu() {
     <div className="menu">
       <ul>
         <li>
-          <Link to="home">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="world">World</Link>
@@ -19,9 +19,9 @@ function Menu() {
         </li>
         <li>
           <Link to="Health">Health</Link>
-          <li>
+        </li>
+        <li>
             <Link to="Politics">Politics</Link>
-          </li>
         </li>
       </ul>
     </div>
