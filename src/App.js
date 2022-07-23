@@ -7,6 +7,7 @@ import Health from "./pages/Health/Health";
 import Politics from "./pages/Politics/Politics";
 import Article from "./pages/Article/Article";
 import Header from "./components/Header";
+
 import "./App.css";
 
 function App() {

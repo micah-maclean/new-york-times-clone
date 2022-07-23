@@ -1,0 +1,53 @@
+.center {
+  margin-right: 25px;
+}
+
+.title {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  text-align: center;
+}
+
+.news-header {
+  display: flex;
+  margin-top: 50px;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #dfdfdf;
+  padding-left: 20px;
+}
+
+.aside_img {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.aside_img > h2 {
+  margin: 0 10px;
+}
+
+.aside_card > p {
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.aside_card > hr {
+  margin: 30px 0 15px 0;
+  color: #dfdfdf;
+}
+
+.aside_card {
+  margin: 0 10px 20px 10px;
+}
+
+.new-by-date {
+  color: #727272;
+  margin: 10px 0 0 10px;
+}

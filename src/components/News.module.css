@@ -1,16 +1,15 @@
-.news{
-
+.news {
 }
 
-.news img{
-    max-width: 100%;
+.news img {
+  max-width: 50%;
 }
 
-.news a{
-    color: black;
-    text-decoration: none;
+.news a {
+  color: black;
+  text-decoration: none;
 }
 
-.news a:hover{
-    color: #5A5A5A;
+.news a:hover {
+  color: #5a5a5a;
 }
