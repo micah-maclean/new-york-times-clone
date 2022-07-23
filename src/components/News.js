@@ -26,7 +26,7 @@ function News({title, abstract, url, image, caption, byline, publishedDate}) {
             </p> 
         </div>       
     </article>
-  )
+  );
 }
 
 export default News;
