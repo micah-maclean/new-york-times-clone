@@ -1,3 +1,8 @@
+.center,
+.aside {
+  cursor: pointer;
+}
+
 .center {
   margin-right: 25px;
 }
@@ -10,6 +15,14 @@
 .subtitle {
   font-size: 16px;
   text-align: center;
+}
+.data-center {
+  text-align: center;
+}
+
+.title:hover,
+.aside_img > h2:hover {
+  text-decoration: underline;
 }
 
 .news-header {
