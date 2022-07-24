@@ -1,6 +1,3 @@
-.aside {
-}
-
 .aside hr {
     margin: 12px 0;
 }
@@ -8,10 +5,18 @@
 .aside > div:nth-child(3) {
     display: flex;
     flex-direction: row;
-    gap: 24px;
 }
 
-.aside > div:last-child > * {
+.aside > div:nth-child(3)  > *:first-child { 
+    padding-right: 12px;
+    border-right: 2px solid lightgray;
+}
+
+.aside > div:nth-child(3)  > *:last-child {
+    padding-left: 12px;
+}
+
+.aside > div:last-child > *:not(h4) {
     padding: 8px 0;
 }
 

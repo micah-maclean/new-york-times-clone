@@ -21,13 +21,13 @@ function Menu() {
           <Link to="/">Business</Link>
         </li>
         <li>
-          <Link to="Science">Opinion</Link>
+          <Link to="/">Opinion</Link>
         </li>
         <li>
           <Link to="tech">Tech</Link>
         </li>
         <li>
-          <Link to="/">Science</Link>
+          <Link to="Science">Science</Link>
         </li>
         <li>
           <Link to="Health">Health</Link>
