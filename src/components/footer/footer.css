@@ -1,0 +1,50 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-ny {
+  margin-bottom: 20px;
+  width: 1200px;
+  font-size: 5px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.title-ny img {
+  max-width: 162px;
+}
+
+.menu-item-footer {
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+.menu-item-footer li:hover {
+  text-decoration: underline;
+}
+
+.titile-menu-item {
+  color: rgb(51, 51, 51);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.link-tomenu {
+  color: rgb(51, 51, 51);
+  font-weight: normal;
+}
+
+.subscribe {
+  font-weight: 600;
+}
+
+.icone-footer {
+  margin-right: 7px;
+  width: 13px;
+  height: 13px;
+}

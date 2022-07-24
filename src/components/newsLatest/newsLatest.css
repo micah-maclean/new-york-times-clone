@@ -3,11 +3,15 @@
   flex-direction: column;
   width: 100%;
   margin-left: 70px;
+  margin-top: -41px;
 }
 
 .news-latest-card {
   display: flex;
   margin-bottom: 55px;
+  cursor: pointer;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 40px;
 }
 
 .news-latest-content {
@@ -22,14 +26,59 @@
 
 .news-latest-content-abstract {
   text-align: left;
-  width: 340px;
+  width: 437px;
+  padding-bottom: 5px;
+}
+
+.news-latest-content-abstract p {
+  padding-top: 5px;
 }
 
 .news-latest-content-date {
   color: #727272;
+  cursor: text;
 }
 
 .news-latest-content-title > h2 {
   margin: 0 0 12px 0;
   font-weight: 400;
+  cursor: pointer;
+}
+
+.news-latest-content-title > h2:hover {
+  text-decoration: underline;
+}
+
+.news-latest button {
+  width: 134px;
+  height: 40px;
+  color: #363636;
+  margin-bottom: 24px;
+  background-color: white;
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: none;
+  cursor: pointer;
+  padding-left: 45px;
+  padding-right: 45px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.btn-search {
+  width: 170px;
+  height: 40px;
+}
+.search-icon {
+  width: 13px;
+  height: 13px;
+}
+
+.btn-search-card {
+  align-items: center;
+  width: 61px;
+  margin-left: -10px;
+  justify-content: space-between;
+  display: flex;
 }
