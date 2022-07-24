@@ -1,5 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import styles from "./Home.module.css"
+import Aside from '../../components/Aside/Aside';
+import GridLine from '../../components/GridLine/GridLine';
 import News from '../../components/News';
 
 function Home() {
@@ -20,93 +23,39 @@ function Home() {
     setup();
   }, []);
 
-  const FILTERED_WELL = apiResult.filter((news) => news.section === "well");
-  const FILTERED_OPINION = apiResult.filter(
-    (news) => news.section === "opinion"
-  );
-  const FILTERED_BUSINESS = apiResult.filter(
-    (news) => news.section === "business"
-  );
-  const FILTERED_US = apiResult.filter((news) => news.section === "us");
-  const FILTERED_ARTS = apiResult.filter((news) => news.section === "arts");
+  
+  const FILTERED_OPINION = apiResult.filter( (news) => news.section === 'opinion');
+  const FILTERED_WELL = apiResult.filter( (news) => news.section === 'well');
+ 
+
 
   return (
-    <div>
-      <div style={{ background: "lightblue" }}>
-        {FILTERED_ARTS.map((news, i) => (
-          <>
-            <p style={{ color: "red" }}>
-              {news.section} : {news.subsection}
-            </p>
-
-            <News
-              key={i}
-              title={news.title}
-              abstract={news.abstract}
-              url={news.url}
-              image={news.multimedia?.length > 0 ? news.multimedia[0] : null}
-              caption={news.caption}
-              byline={news.byline}
-              publishedDate={news.published_date}
-            />
-          </>
-        ))}
+    <div className={styles.home}>
+      <div>
+        <div>
+         {
+          apiResult.map( (news, i) => {
+              if(i%2 === 0){
+                return(
+                  <div className={styles.newsBlock}>
+                    <div>
+                      <News title={apiResult[i].title} abstract={apiResult[i].abstract}/>
+                      <News title={apiResult[i+1].title} />
+                    </div>
+                   
+                    <img src={apiResult[i].multimedia?.length > 0 ? news.multimedia[1].url : null} alt="" />
+                  </div>
+                )
+              } 
+          })
+        } 
+        </div>
+        
+      
+        {FILTERED_OPINION && <Aside newsList={FILTERED_OPINION}/>}
       </div>
-      <div style={{ background: "lightgray" }}>
-        {FILTERED_WELL.map((news, i) => (
-          <>
-            <p style={{ color: "red" }}>
-              {news.section} : {news.subsection}
-            </p>
-            <News
-              key={i}
-              title={news.title}
-              abstract={news.abstract}
-              url={news.url}
-              image={news.multimedia?.length > 0 ? news.multimedia[0] : null}
-              caption={news.caption}
-              byline={news.byline}
-              publishedDate={news.published_date}
-            />
-          </>
-        ))}
-      </div>
-      <div style={{ background: "lightcyan" }}>
-        {FILTERED_BUSINESS.map((news, i) => (
-          <>
-            <p style={{ color: "red" }}>{news.section}</p>
-            <News
-              key={i}
-              title={news.title}
-              abstract={news.abstract}
-              url={news.url}
-              image={news.multimedia?.length > 0 ? news.multimedia[0] : null}
-              caption={news.caption}
-              byline={news.byline}
-              publishedDate={news.published_date}
-            />
-          </>
-        ))}
-      </div>
-      <div style={{ background: "lightgray" }}>
-        {FILTERED_US.map((news, i) => (
-          <>
-            <p style={{ color: "red" }}>
-              {news.section} : {news.subsection}
-            </p>
-            <News
-              key={i}
-              title={news.title}
-              abstract={news.abstract}
-              url={news.url}
-              image={news.multimedia?.length > 0 ? news.multimedia[0] : null}
-              caption={news.caption}
-              byline={news.byline}
-              publishedDate={news.published_date}
-            />
-          </>
-        ))}
-      </div>
+      {FILTERED_WELL && <GridLine newsList={FILTERED_WELL}/>}
+      
     </div>
   );
 }

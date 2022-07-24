@@ -1,5 +1,41 @@
-.card {
+.home {
+}
+
+.home > div:first-child {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding-top: 10px;
+  grid-template-columns: 2fr 1fr;
+  margin-bottom: 16px;
+}
+
+.home > div:first-child > div {
+  padding-right: 12px;
+}
+
+.newsBlock {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 16px 0;
+}
+
+.newsBlock img {
+  max-width: 100%;
+  padding-left: 8px;
+}
+
+.newsBlock > div > *:not(:last-child){
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+.newsBlock:not(:first-child) {
+  border-top: 1px solid lightgrey;
+}
+
+.newsBlock:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
+}
+
+.home > div:first-child > Aside {
+  border-left: 2px solid grey ;
+  padding-left: 12px;
 }

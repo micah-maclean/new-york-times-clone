@@ -1,0 +1,20 @@
+.aside {
+}
+
+.aside hr {
+    margin: 12px 0;
+}
+
+.aside > div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.aside > div:last-child > * {
+    padding: 8px 0;
+}
+
+.aside > div:last-child > *:not(h4):not(:last-child) {
+    border-bottom: 1px solid lightgray;
+}
