@@ -1,0 +1,35 @@
+.news-latest {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 70px;
+}
+
+.news-latest-card {
+  display: flex;
+  margin-bottom: 55px;
+}
+
+.news-latest-content {
+  display: flex;
+  width: 900px;
+  justify-content: space-between;
+}
+
+.news-latest-content-text {
+  width: 300px;
+}
+
+.news-latest-content-abstract {
+  text-align: left;
+  width: 340px;
+}
+
+.news-latest-content-date {
+  color: #727272;
+}
+
+.news-latest-content-title > h2 {
+  margin: 0 0 12px 0;
+  font-weight: 400;
+}
