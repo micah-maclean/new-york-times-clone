@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import "./Menu.css";
+import styles from "./Menu.module.css";
 
 function Menu() {
   return (
-    <div className="menu">
+    <div className={styles.menu}>
       <ul>
         <li>
           <Link to="world">World</Link>
@@ -12,7 +12,7 @@ function Menu() {
           <Link to="/">U.S.</Link>
         </li>
         <li>
-            <Link to="Politics">Politics</Link>
+            <Link to="politics">Politics</Link>
         </li>
         <li>
           <Link to="/">N.Y.</Link>
@@ -27,10 +27,10 @@ function Menu() {
           <Link to="tech">Tech</Link>
         </li>
         <li>
-          <Link to="Science">Science</Link>
+          <Link to="science">Science</Link>
         </li>
         <li>
-          <Link to="Health">Health</Link>
+          <Link to="health">Health</Link>
         </li>
         <li>
           <Link to="/">Sport</Link>

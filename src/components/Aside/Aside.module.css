@@ -23,3 +23,14 @@
 .aside > div:last-child > *:not(h4):not(:last-child) {
     border-bottom: 1px solid lightgray;
 }
+
+.aside > div:last-child > article{
+    justify-content: space-between;
+}
+
+.aside > div:last-child > *:not(h4) img {
+    min-width: 90px;
+    max-width: 90px;
+    min-height: 90px;
+    max-height: 90px ;
+}

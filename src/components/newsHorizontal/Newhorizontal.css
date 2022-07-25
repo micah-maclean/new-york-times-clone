@@ -18,11 +18,11 @@
   border-left: none;
 }
 
-a:hover {
+.news-horizontal a:hover {
   text-decoration: underline;
 }
 
-a {
+.news-horizontal a {
   color: #121212;
   text-decoration: none;
   overflow-wrap: break-word;

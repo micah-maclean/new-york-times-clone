@@ -26,23 +26,24 @@ function Home() {
   
   const FILTERED_OPINION = apiResult.filter( (news) => news.section === 'opinion');
   const FILTERED_WELL = apiResult.filter( (news) => news.section === 'well');
+  const FILTERED_LIST = apiResult.filter( (news) => news.section !== 'well' && news.section !== 'opinion');
+  
 
   return (
     <div className={styles.home}>
       <div>
         <div>
-          {console.log(FILTERED_OPINION)}
          {
-          apiResult.map( (news, i) => {
-              if(i%2 === 0 && i+1<apiResult.length){
+          FILTERED_LIST.map( (news, i) => {
+              if(i%2 === 0 && i+1<FILTERED_LIST.length){
                 return(
-                  <div className={styles.newsBlock}>
+                  <div key={i} className={styles.newsBlock}>
                     <div>
-                      <News key={i} title={apiResult[i].title} abstract={apiResult[i].abstract}/>
-                      <News key={i+1} title={apiResult[i+1].title} />
+                      <News title={FILTERED_LIST[i].title} abstract={FILTERED_LIST[i].abstract} noImage={true} obj={FILTERED_LIST[i]}/>
+                      <News title={FILTERED_LIST[i+1].title} noImage={true} obj={FILTERED_LIST[i+1]}/>
                     </div>
                    
-                    <img src={apiResult[i].multimedia?.length > 0 ? news.multimedia[1].url : null} alt="" />
+                    <img src={FILTERED_LIST[i].multimedia?.length > 0 ? news.multimedia[1].url : null} alt="" />
                   </div>
                 )
               } 
@@ -53,7 +54,11 @@ function Home() {
       
         {FILTERED_OPINION.length > 0 && <Aside newsList={FILTERED_OPINION}/>}
       </div>
-      {FILTERED_WELL && <GridLine newsList={FILTERED_WELL}/>}
+      <div>
+        <h4>Well</h4>
+        {FILTERED_WELL && <GridLine newsList={FILTERED_WELL}/>}
+      </div>
+      
       
     </div>
   );

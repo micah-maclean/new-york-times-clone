@@ -1,25 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Diplomata&display=swap");
 
 header {
-  padding-top: 20px;
+  padding-top: 8px;
   border-bottom: 5px double black;
   margin-bottom: 16px;
 }
 
 .middle-menu {
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 2fr 3fr 2fr;
   border-bottom: 1px solid lightgray;
 }
 
-.middle-menu a{
-  width: 195px;
-  height: 26px;
+.small-logo > img{
+  height: 40px;
 }
 
-.logo {
+.logo  > img{
   height: 58px;
+  max-width: 100%;
 }
+
 .language-menu {
   list-style: none;
   display: flex;
@@ -32,6 +33,32 @@ header {
   grid-template-columns: 2fr 3fr 2fr;
 }
 
+.top-menu > .div-left , .top-menu > .div-right{
+  display: flex;
+  align-items: center;
+}
+.top-menu .div-left button {
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+} 
+
+.top-menu .div-left button:hover {
+  background-color: #f7f7f7;
+}
+
+.middle-menu > .div-left, .middle-menu > .div-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.red{
+  color: red;
+}
+
 .top-menu > div > *:not(:last-child) {
   margin-right: 8px;
 }
@@ -41,8 +68,11 @@ header {
 }
 
 .cta {
+  font-weight: bold;
+  font-size: 12px;
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 6px 12px;
+  border-radius: 4px;
   color: white;
   background-color: #567b95;
   border: 1px solid #326891;
@@ -61,7 +91,7 @@ header {
 }
 
 span {
-  display: block;
+  font-size: 12px;
 }
 
 header a{
@@ -71,6 +101,6 @@ header a{
   text-decoration: none;
 }
 
-header a:hover{
+header a:not(.logo):not(.small-logo):hover{
   background-color: #f7f7f7;
 }

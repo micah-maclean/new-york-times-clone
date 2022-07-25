@@ -1,4 +1,5 @@
 .home {
+  margin-bottom: 16px;
 }
 
 .home > div:first-child {
@@ -38,4 +39,14 @@
 .home > div:first-child > Aside {
   border-left: 2px solid grey ;
   padding-left: 12px;
+}
+
+.home > div:last-child {
+  padding: 8px 0;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey ;
+}
+
+.home > div:last-child > h4 {
+  margin-bottom: 16px;
 }

@@ -56,3 +56,10 @@
   height: 34px;
   width: 124px;
 }
+
+.news-detail-card-buttons button:first-of-type > span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
