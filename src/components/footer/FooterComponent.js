@@ -12,7 +12,7 @@ function FooterComponent() {
       <div className="title-ny">
         <img src={logo} alt="" />
       </div>
-      <div className="container">
+      <div className="container border-bottom-final">
         <ul className="menu-item-footer">
           <li className="titile-menu-item">NEWS</li>
           <li>
@@ -124,36 +124,41 @@ function FooterComponent() {
         </div>
         <div>
           <ul className="menu-item-footer">
-            <li className="titile-menu-item">SUBSCRIBE</li>
-            <div className="subscribe">
-              <li>
-                <img className="icone-footer" src={homeDeliveryIcon} alt="" />
-                Home Delivery
-              </li>
-              <li>
-                <img className="icone-footer" src={nyIcon} alt="" />
-                Digital Subscriptions
-              </li>
-              <li>
-                <img className="icone-footer" src={gameIcon} alt="" />
-                Games
-              </li>
-              <li>
-                <img className="icone-footer" src={cookieIcon} alt="" />
-                Cooking
-              </li>
-            </div>
-            <li>Email newsletters</li>
-            <li>Corporate Subscriptions</li>
-            <li>Education Rate</li>
+            <div className="border-menu">
+              <li className="titile-menu-item">SUBSCRIBE</li>
+              <div className="subscribe">
+                <li>
+                  <img className="icone-footer" src={homeDeliveryIcon} alt="" />
+                  Home Delivery
+                </li>
+                <li>
+                  <img className="icone-footer" src={nyIcon} alt="" />
+                  Digital Subscriptions
+                </li>
+                <li>
+                  <img className="icone-footer" src={gameIcon} alt="" />
+                  Games
+                </li>
+                <li>
+                  <img className="icone-footer" src={cookieIcon} alt="" />
+                  Cooking
+                </li>
+              </div>
+              <div className="menu-item-font">
+                <li>Email newsletters</li>
+                <li>Corporate Subscriptions</li>
+                <li>Education Rate</li>
+              </div>
 
-            <div>
-              <li>Mobile Applications</li>
-              <li>Replica Edition</li>
-              <li>International</li>
-              <li>Canada</li>
-              <li>Español</li>
-              <li>中文网</li>
+              <div className="border-menu-bottom"></div>
+              <div className="menu-item-font">
+                <li>Mobile Applications</li>
+                <li>Replica Edition</li>
+                <li>International</li>
+                <li>Canada</li>
+                <li>Español</li>
+                <li>中文网</li>
+              </div>
             </div>
           </ul>
         </div>
